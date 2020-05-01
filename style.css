@@ -61,7 +61,7 @@ h1 {
 .head:hover {
 	width: 225px;
     transition: .5s ease-in-out;
-    animation: headbop 2s infinite;
+    animation: headbop 1s infinite;
     box-shadow: 0px 0px 15px #CFC0FF;
 }
 
@@ -89,7 +89,7 @@ h1 {
     -ms-transform: rotate(20deg);
     transform: rotate(20deg);
     box-shadow: 0px 0px 15px #CFC0FF;
-    animation: la-wiggle 2s infinite;
+    animation: la-wiggle 1s infinite;
 
 }
 
@@ -112,7 +112,7 @@ h1 {
     -ms-transform: rotate(-20deg);
     transform: rotate(-20deg);
     box-shadow: 0px 0px 15px #CFC0FF;
-    animation: ra-wiggle 2s infinite;
+    animation: ra-wiggle 1s infinite;
 } 
 @keyframes ra-wiggle {
 	0% {transform: rotate(-20deg);}
@@ -132,7 +132,7 @@ h1 {
 
 .torso:hover {
 	transform: translate(0px, 10px);
-	animation: wiggle 2s infinite;
+	animation: wiggle 1s infinite;
 	box-shadow: 0px 0px 15px #CFC0FF;
 } 
 
@@ -174,7 +174,7 @@ h1 {
     -ms-transform: rotate(20deg);
     transform: rotate(20deg);
     box-shadow: 0px 0px 15px #CFC0FF;
-    animation: ll-wiggle 2s infinite;
+    animation: ll-wiggle 1s infinite;
 }
 @keyframes ll-wiggle {
 
@@ -196,7 +196,7 @@ h1 {
     -ms-transform: rotate(-20deg);
     transform: rotate(-20deg);
     box-shadow: 0px 0px 15px #CFC0FF;
-    animation: rl-wiggle 2s infinite;
+    animation: rl-wiggle 1s infinite;
 }
 
 @keyframes rl-wiggle {
