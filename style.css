@@ -1,0 +1,246 @@
+h1 {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	border-left: solid 5px #A286FD;
+	border-right: solid 5px #A286FD;
+	color: #A286FD;
+	font-style: italic;
+	width: 400px;
+	left: 300px;
+	margin: auto;
+	background-color: #CFC0FF;
+	padding: 10px 10px;
+
+}
+
+body {
+	background-image: radial-gradient(circle, #A286FD, #CFC0FF, #6E49E6);
+}
+
+.robots {
+}
+
+.head, 
+.left_arm, 
+.torso, 
+.right_arm, 
+.left_leg, 
+.right_leg {
+	 background-color: #F5387E;
+	 background-image: url("galaxy.jpg")
+}
+
+.head { 
+	width: 200px; 
+	margin: 0 auto; 
+	height: 150px; 
+	border-radius: 200px 200px 0 0; 
+	margin-bottom: 10px;
+	
+} 
+
+@keyframes headbop {
+	0% {transform: translate(0px, 0px)}
+	25% {transform: translate(0px, 10px)}
+	50% {transform: translate(0px, 0px)}
+	75% {transform: translate(0px, 10px)}
+	100% {transform: translate(0px, 0px)}
+
+}
+
+.eyes {
+	display:flex;
+}
+
+.head:hover {
+	width: 225px;
+    transition: .5s ease-in-out;
+    animation: headbop 2s infinite;
+    box-shadow: 0px 0px 15px #CFC0FF;
+}
+
+.upper_body { 
+	width: 300px; 
+	height: 150px;
+	margin: auto;
+	display: flex; 
+} 
+
+.left_arm, .right_arm { 
+	width: 40px; 
+	height: 125px;
+	border-radius: 100px;
+	transition: transform .5s; 
+} 
+
+.left_arm { 
+	margin-right: 10px; 
+} 
+.left_arm:hover {
+	-webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+    box-shadow: 0px 0px 15px #CFC0FF;
+    animation: la-wiggle 2s infinite;
+
+}
+
+@keyframes la-wiggle {
+	0% {transform: rotate(20deg);}
+	25% {transform: rotate(0deg);}
+	50% {transform: rotate(20deg);}
+	75% {transform: rotate(0deg);}
+	100% {transform: rotate(20deg);}
+}
+
+.right_arm { 
+	margin-left: 10px;
+	transition: transform .5s; 
+} 
+.right_arm:hover { 
+	-webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -o-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+    box-shadow: 0px 0px 15px #CFC0FF;
+    animation: ra-wiggle 2s infinite;
+} 
+@keyframes ra-wiggle {
+	0% {transform: rotate(-20deg);}
+	25% {transform: rotate(0deg);}
+	50% {transform: rotate(-20deg);}
+	75% {transform: rotate(0deg);}
+	100% {transform: rotate(-20deg);}
+}
+
+.torso { 
+	width: 200px; 
+	height: 200px;
+	border-radius: 0 0 50px 50px;
+	transition: transform .5s;
+	
+} 
+
+.torso:hover {
+	transform: translate(0px, 10px);
+	animation: wiggle 2s infinite;
+	box-shadow: 0px 0px 15px #CFC0FF;
+} 
+
+@keyframes wiggle {
+
+	0% {transform: translate(0px, 0px)}
+	25% {transform: translate(10px, 0px)}
+	50% {transform: translate(0px, 0px)}
+	75% {transform: translate(-10px, 0px)}
+	100% {transform: translate(0px, 0px)}
+
+}
+
+
+.lower_body { 
+	width: 200px; 
+	height: 200px;
+	/* This is another useful property. Hmm what do you think it does?*/
+	margin: 0 auto;
+	display: flex;
+
+} 
+
+.left_leg, .right_leg { 
+	width: 40px; 
+	height: 120px;
+	border-radius: 0 0 100px 100px;
+	transition: transform .5s; 
+} 
+
+.left_leg { 
+	margin-left: 45px; 
+} 
+
+.left_leg:hover {
+	-webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+    box-shadow: 0px 0px 15px #CFC0FF;
+    animation: ll-wiggle 2s infinite;
+}
+@keyframes ll-wiggle {
+
+	0% {transform: rotate(20deg);}
+	25% {transform: rotate(0deg);}
+	50% {transform: rotate(20deg);}
+	75% {transform: rotate(0deg);}
+	100% {transform: rotate(20deg);}
+}
+
+.right_leg { 
+	margin-left: 35px;
+}
+
+.right_leg:hover { 
+	-webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -o-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+    box-shadow: 0px 0px 15px #CFC0FF;
+    animation: rl-wiggle 2s infinite;
+}
+
+@keyframes rl-wiggle {
+
+	0% {transform: rotate(-20deg);}
+	25% {transform: rotate(0deg);}
+	50% {transform: rotate(-20deg);}
+	75% {transform: rotate(0deg);}
+	100% {transform: rotate(-20deg);}
+}
+
+.left_eye, .right_eye { 
+	width: 20px; 
+	height: 20px; 
+	border-radius: 15px; 
+	background-color: #A286FD;
+	
+} 
+
+.left_eye { 
+	/* These properties are new and you haven't encountered
+	in this course. Check out CSS Tricks to see what it does! */
+	position: relative;
+	top: 100px;
+	left: 40px; 
+	
+} 
+
+.right_eye { 
+	position: relative;
+	top: 100px; 
+	left: 120px; 
+
+}
+
+.Gary {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	color: #A286FD;
+	font-weight: bold;
+	font-size: 1.5em;
+	background-color: #CFC0FF;
+	padding: 10px 10px;
+	width: 400px;
+	margin: auto;
+	border-left: solid 5px #A286FD;
+	border-right: solid 5px #A286FD;
+}
+
+
+
+
+
